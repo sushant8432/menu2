@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tula's Cafeteria Menu (T2)</h1>
+        <div class="search-container">
+            <input type="text" id="search" onkeyup="searchMenu()" placeholder="🔍 Search menu items..." autocomplete="off">
+            <div id="search-results" class="search-results hidden">
+            </div>
+        
+    </header>
+    
+    <main>
+        <div class="menu-container">
+            <!-- Menu Items -->
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/3915906/pexels-photo-3915906.jpeg?cs=srgb&dl=close-up-photo-of-burger-3915906.jpg&fm=jpg" alt="Burger">
+                <h2>Cheese Burger</h2>
+                <p>₹ 50</p>
+                <button onclick="addToCart('Cheese Burger', 50)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://th.bing.com/th/id/OIP.lU5tM2RWjQqWk6eWTo_GJAHaE8?rs=1&pid=ImgDetMain" alt="Pizza">
+                <h2>Pepperoni Pizza</h2>
+                <p>₹ 109</p>
+                <button onclick="addToCart('Pepperoni Pizza', 109)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?cs=srgb&dl=basil-blur-close-up-1437267.jpg&fm=jpg" alt="Pasta">
+                <h2>Pasta</h2>
+                <p>₹ 70</p>
+                <button onclick="addToCart('Pasta', 70)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://thumbs.dreamstime.com/z/colorful-cold-drinks-plastic-cups-beach-ice-fresh-fruits-86654557.jpg" alt="cold drink">
+                <h2>Cold Drink</h2>
+                <p>₹ 40</p>
+                <button onclick="addToCart('Cold Drink', 40)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://img.freepik.com/premium-photo/indian-food-kadai-paneer-thali_55610-1982.jpg?w=1480" alt="Kadhai Panner">
+                <h2> Kadhai Panner</h2>
+                <p>₹ 249</p>
+                <button onclick="addToCart('Kadhai Panner', 249)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://media.istockphoto.com/photos/fried-spring-roll-on-white-background-isolated-vietnamese-food-picture-id1177235324?k=20&m=1177235324&s=170667a&w=0&h=YMUfiZP_JOpdKvsFAKEzM9mrryyCDFXAZa-UTl5Xzs8=" alt="Spring Roll">
+                <h2>Spring Roll</h2>
+                <p>₹ 60</p>
+                <button onclick="addToCart('Spring Roll', 60)">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://rukminim1.flixcart.com/image/416/416/k3670cw0/poster/p/5/k/large-ice-cream-wall-poster-food-poster-kitchen-decor-poster-original-imafmd3wrqmzzktb.jpeg?q=70" alt="Ice Cream">
+                <h2> Ice Cream</h2>
+                <p>₹ 80</p>
+                <button onclick="addToCart('Ice Cream', 80)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://t4.ftcdn.net/jpg/04/94/42/89/360_F_494428966_PTGzFWvQSzr2t1uUtGeHYbYpbr46a6KJ.jpg" alt="Rasmali">
+                <h2>Rasmalai</h2>
+                <p>₹ 70</p>
+                <button onclick="addToCart('Rasmalai', 70)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total:  ₹ <span id="total-price">0.00</span></p>
+            <button onclick="placeOrder()">Place Order</button>
+        </div>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
